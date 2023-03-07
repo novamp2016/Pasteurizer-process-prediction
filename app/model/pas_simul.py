@@ -1,10 +1,11 @@
-import psycopg2
+import sqlite3
 
-# 클라우드 데이터베이스
-host = 'hansken.db.elephantsql.com'
-user = 'bxioxbkq'
-password = 'K6TNSnR-7xqE8wC1Kaj0-C8o94omN0UN'
-database = 'bxioxbkq'
+'''
+클라우드 데이터베이스
+host = ''
+user = ''
+password = ''
+database = ''
 
 connection = psycopg2.connect(
      host=host,
@@ -12,7 +13,8 @@ connection = psycopg2.connect(
      password=password,
      database=database,
  )
-
+'''
+connection = sqlite3.connect('simul.db')
 cur = connection.cursor()
 
 def load_data(name, id): # 시뮬레이션을 위한 데이터 수집

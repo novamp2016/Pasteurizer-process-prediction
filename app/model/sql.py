@@ -1,10 +1,11 @@
-import psycopg2
+import sqlite3
 
-# 클라우드 데이터베이스
-host = 'arjuna.db.elephantsql.com'
-user = 'ppmxrrek'
-password = 'kQz95JZRT5Wx__AlwouNdOrsXtcYAf8s'
-database = 'ppmxrrek'
+'''
+클라우드 데이터베이스
+host = ''
+user = ''
+password = ''
+database = ''
 
 connection = psycopg2.connect(
      host=host,
@@ -12,7 +13,9 @@ connection = psycopg2.connect(
      password=password,
      database=database,
  )
+'''
 
+connection = sqlite3.connect('test.db')
 cur = connection.cursor()
 
 def load_m_list(f_id):
